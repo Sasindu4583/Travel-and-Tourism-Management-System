@@ -11,21 +11,36 @@
     <style>
         /* Custom Styles for Header */
         .navbar {
-            background-color: #f8f9fa; /* Light gray background */
+            background-color: #28a745; /* Green background */
+            border-bottom: 2px solid #1c7430; /* Darker green border for contrast */
         }
         .navbar-brand img {
             height: 50px; /* Logo size */
         }
+        .navbar-nav .nav-link {
+            color: white; /* White text for menu items */
+            font-weight: 500; /* Slightly bolder text */
+        }
+        .navbar-nav .nav-link:hover {
+            color: #f8f9fa; /* Light color on hover */
+            text-decoration: underline; /* Underline effect on hover */
+        }
         .user-icon {
             font-size: 1.8rem;
-            color: #333;
+            color: white; /* White color for user icon */
             text-decoration: none;
             margin-left: 15px;
         }
+        .user-icon:hover {
+            color: #f8f9fa; /* Light color on hover */
+        }
         .location-icon {
             font-size: 1rem;
-            color: #007bff; /* Blue color for location text */
+            color: white; /* White color for location text */
             margin-right: 10px;
+        }
+        .navbar-toggler-icon {
+            background-color: white; /* White hamburger icon for mobile */
         }
         @media (max-width: 768px) {
             .navbar-nav {

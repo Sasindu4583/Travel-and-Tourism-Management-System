@@ -252,7 +252,9 @@ if (!$tour) {
                 <p>Duration: <?php echo htmlspecialchars($tour['days']); ?> Days</p>
             </div>
             <div class="enquiry">
-                <button class="enquiry-btn">Enquire Now</button>
+            <a href="inquiry.php">
+            <button class="enquiry-btn">Enquire Now</button>
+        </a>
             </div>
         </aside>
     </main>
