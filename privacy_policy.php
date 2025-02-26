@@ -3,8 +3,8 @@ require_once 'config/database.php';
 $database = new Database();
 $conn = $database->getConnection();
 
-// Fetch the "About Us" page content
-$query = "SELECT * FROM pages WHERE page_name = 'about_us'";
+// Fetch the "privacy_policy" page content
+$query = "SELECT * FROM pages WHERE page_name = 'privacy_policy'";
 $result = $conn->query($query);
 
 if ($result->num_rows > 0) {
@@ -12,7 +12,7 @@ if ($result->num_rows > 0) {
     $title = $page['title'];
     $content = $page['content'];
 } else {
-    $title = "About Us";
+    $title = "privacy_policy";
     $content = "<p>No content available.</p>";
 }
 ?>
@@ -28,8 +28,8 @@ if ($result->num_rows > 0) {
     <?php include 'includes/header.php'; ?>
     <?php include 'includes/navigation.php'; ?>
 
-    <main class="center-text">
-        <h1><?php echo htmlspecialchars($title); ?></h1>
+    <main>
+        <h1 class="center-text"><?php echo htmlspecialchars($title); ?></h1>
         <div class="page-content">
             <?php echo $content; ?>
         </div>
