@@ -1,0 +1,13 @@
+-----------------------------------------------
+
+Admin login link
+
+http://localhost/sritravels/admin/login.php
+
+-----------------------------------------------
+
+Add a new admin to database
+
+USE tourism_management;
+INSERT INTO admin_users (id,password,username,email)
+VALUES('2','456','admin2','admin2@gmail.com');

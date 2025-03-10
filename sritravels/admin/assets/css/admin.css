@@ -1,0 +1,267 @@
+/* Admin Panel Styles */
+:root {
+    --primary-color: #007bff; /* Primary color for buttons and links */
+    --secondary-color: #6c757d; /* Secondary color for less important elements */
+    --success-color: #28a745; /* Color for success messages */
+    --danger-color: #dc3545; /* Color for error messages */
+    --warning-color: #ffc107; /* Color for warning messages */
+    --info-color: #17a2b8; /* Color for informational messages */
+    --light-color: #f8f9fa; /* Light background color */
+    --dark-color: #343a40; /* Dark text color */
+    --white-color: #ffffff; /* White color */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure padding and border are included in element dimensions */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Set default font */
+    line-height: 1.6; /* Set line height for better readability */
+    background-color: #f4f6f9; /* Set background color */
+    color: #2c3e50; /* Set default text color */
+}
+
+.admin-container {
+    display: flex;
+    min-height: 100vh; /* Ensure the container takes at least the full viewport height */
+    background-color: #f1f3f6; /* Set background color for the container */
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 260px; /* Set sidebar width */
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%); /* Gradient background */
+    color: white; /* Text color */
+    padding: 20px 0;  /* Padding for the sidebar */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Add shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for any changes */
+}
+
+.sidebar nav ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+}
+
+.sidebar nav ul li {
+    margin: 10px 0; /* Add margin between list items */
+}
+
+.sidebar nav ul li a {
+    color: white; /* Link text color */
+    text-decoration: none; /* Remove underline from links */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    padding: 10px 20px; /* Add padding to links */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.sidebar nav ul li a:hover {
+    background-color: rgba(255,255,255,0.1); /* Light background on hover */
+    border-left: 4px solid var(--primary-color); /* Add a border on hover */
+}
+
+/* Logout Button in Sidebar */
+
+
+.sidebar .logout a {
+    background-color: #e74c3c; /* Sets the background color of the logout link to red  */
+    color: white; /* Sets the text color of the logout link to white */
+    padding: 10px; /* Adds 10px of padding inside the link, creating space around the text */
+    text-align: center; /* Centers the text horizontally within the link */
+    border-radius: 5px; /* Rounds the corners of the link with a 5px radius */ 
+    display: block; /* Makes the link a block-level element, so it takes up the full width of its container */
+    transition: background-color 0.3s; /* Adds a smooth transition effect for the background color over 0.3 seconds */
+}
+
+
+
+/* Dashboard Main Area */
+.dashboard {
+    flex-grow: 1; /* Allow the dashboard to take up remaining space */
+    padding: 30px; /* Add padding */
+    background-color: #f4f6f9; /* Set background color */
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+}
+
+.dashboard h1 {
+    color: #2c3e50; /* Heading color */
+    margin-bottom: 30px; /* Add margin below the heading */
+    border-bottom: 2px solid var(--primary-color); /* Add a border below the heading */
+    padding-bottom: 10px; /* Add padding below the heading */
+}
+
+/* Stats Container */
+.stats-container {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid columns */
+    gap: 20px; /* Add gap between grid items */
+}
+
+.stat-card {
+    background-color: white; /* Set background color */
+    border-radius: 10px; /* Add rounded corners */
+    padding: 20px; /* Add padding */
+    text-align: center; /* Center text */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Add shadow for depth */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.stat-card:hover {
+    transform: translateY(-5px); /* Move card up slightly on hover */
+}
+
+.stat-card h3 {
+    color: #7f8c8d; /* Subheading color */
+    margin-bottom: 10px; /* Add margin below subheading */
+}
+
+.stat-card p {
+    font-size: 2rem; /* Large font size for numbers */
+    font-weight: bold; /* Bold text */
+    color: var(--primary-color); /* Primary color for numbers */
+}
+
+/* Login Container */
+.login-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    background: linear-gradient( #2575fc 100%); /* Gradient background */
+}
+
+.login-container form {
+    background-color: white; /* Form background color */
+    padding: 40px; /* Add padding */
+    border-radius: 10px; /* Rounded corners */
+    width: 400px; /* Set form width */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Add shadow for depth */
+}
+
+.login-container form h2 {
+    text-align: center; /* Center heading */
+    margin-bottom: 30px; /* Add margin below heading */
+    color: #2c3e50; /* Heading color */
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 20px; /* Add margin below form groups */
+}
+
+.form-group label {
+    display: block; /* Make labels block elements */
+    margin-bottom: 8px; /* Add margin below labels */
+    color: #34495e; /* Label text color */
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%; /* Full width inputs */
+    padding: 10px; /* Add padding */
+    border: 1px solid #bdc3c7; /* Add border */
+    border-radius: 5px; /* Rounded corners */
+    transition: border-color 0.3s ease; /* Smooth transition for focus effect */
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none; /* Remove default outline */
+    border-color: var(--primary-color); /* Change border color on focus */
+}
+
+/* Buttons */
+button, .btn {
+    display: inline-block; /* Make buttons inline-block */
+    padding: 10px 20px; /* Add padding */
+    background-color: var(--primary-color); /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.btn-delete {
+    background-color: var(--danger-color); /* Danger color for delete buttons */
+}
+
+.btn-edit {
+    background-color: var(--warning-color); /* Warning color for edit buttons */
+    margin-right: 10px; /* Add margin to the right */
+}
+
+button:hover, .btn:hover {
+    opacity: 0.9; /* Reduce opacity on hover */
+}
+
+/* Tables */
+.bookings-table, .existing-packages {
+    background-color: white; /* Table background color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Add padding */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Add shadow for depth */
+}
+
+table {
+    width: 100%; /* Full width tables */
+    border-collapse: collapse;  /* Collapse table borders */
+}
+
+table th {
+    background-color: #f1f3f6; /* Table header background color */
+    color: #2c3e50; /* Table header text color */
+    padding: 12px; /* Add padding */
+    text-align: left; /* Align text to the left */
+    border-bottom: 2px solid #e0e4e8; /* Add border below headers */
+}
+
+table td {
+    padding: 12px; /* Add padding */
+    border-bottom: 1px solid #e0e4e8; /* Add border below rows */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .admin-container {
+        flex-direction: column; /* Stack elements vertically on small screens */
+    }
+    
+    .sidebar {
+        width: 100%; /* Full width sidebar on small screens */
+    }
+}
+
+/* Error and Success Messages */
+.error-message {
+    background-color: #f8d7da; /* Error message background color */
+    color: #721c24; /* Error message text color */
+    padding: 15px; /* Add padding */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 20px; /* Add margin below */
+}
+
+.success-message {
+    background-color: #d4edda; /* Success message background color */
+    color: #155724; /* Success message text color */
+    padding: 15px; /* Add padding */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 20px; /* Add margin below */
+}
+
+.btn-cancel {
+    background-color: #95a5a6; /* Cancel button background color */
+    color: white; /* Cancel button text color */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 15px; /* Add padding */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.btn-cancel:hover {
+    background-color: #7f8c8d; /* Darker background on hover */
+}

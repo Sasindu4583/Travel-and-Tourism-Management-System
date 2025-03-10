@@ -1,0 +1,459 @@
+/* Reset and Base Styles */
+* {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    box-sizing: border-box; /* Include padding and border in element dimensions */
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Set default font family */
+    line-height: 1.6; /* Set line height for better readability */
+    color: #333; /* Set default text color */
+    background-color: #ffffff; /* Set background color to white */
+}
+
+/* Typography */
+h1, h2, h3 {
+    color: var(--primary-color); /* Set heading color using CSS variable */
+    margin-bottom: 20px; /* Add margin below headings */
+    font-weight: 700; /* Set font weight to bold */
+    text-transform: capitalize; /* Capitalize the first letter of each word */
+}
+
+h1 {
+    font-size: 2.5rem; /* Set font size for h1 */
+    letter-spacing: -1px; /* Reduce letter spacing for h1 */
+}
+
+h2 {
+    font-size: 2rem; /* Set font size for h2 */
+}
+
+h3 {
+    font-size: 1.5rem; /* Set font size for h3 */
+}
+
+/* Navigation Styles */
+.main-navigation {
+    background-color: #ffffff; /* Set navigation background color to white */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Add shadow for depth */
+    position: sticky; /* Make navigation sticky */
+    top: 0; /* Stick to the top of the page */
+    z-index: 100; /* Ensure navigation is above other content */
+}
+
+.main-navigation ul {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center-align navigation items */
+    list-style: none; /* Remove default list styling */
+    padding: 15px 0; /* Add padding to the navigation */
+}
+
+.main-navigation ul li {
+    margin: 0 15px; /* Add margin between navigation items */
+}
+
+.main-navigation ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: #1a5f7a; /* Set link color */
+    font-weight: bold; /* Set font weight to bold */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.main-navigation ul li a:hover {
+    color: #ff6b6b; /* Change link color on hover */
+}
+
+/* Header Styles */
+header {
+    background-color: #189ed3; /* Set header background color */
+    color: white; /* Set header text color */
+    text-align: center; /* Center-align header content */
+    padding: 20px 0; /* Add padding to header */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #189ed3; /* Set footer background color */
+    color: white; /* Set footer text color */
+    text-align: center; /* Center-align footer content */
+    padding: 15px 0; /* Add padding to footer */
+    position: relative; /* Set position to relative */
+    bottom: 0; /* Align footer to the bottom */
+    width: 100%; /* Full width footer */
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block; /* Make buttons inline-block */
+    background-color: #ff6b6b; /* Set button background color */
+    color: white; /* Set button text color */
+    padding: 10px 20px; /* Add padding to buttons */
+    text-decoration: none; /* Remove underline from buttons */
+    border-radius: 5px; /* Add rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.btn:hover {
+    background-color: #1a5f7a; /* Change button background color on hover */
+}
+
+/* Home Page Styles */
+.home-page .hero {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/hero.png'); /* Add gradient overlay and background image */
+    background-size: cover; /* Ensure the background image covers the entire section */
+    background-position: center; /* Center the background image */
+    color: white; /* Set text color to white */
+    text-align: center; /* Center-align content */
+    padding: 100px 20px; /* Add padding to hero section */
+}
+
+.home-page .hero h1 {
+    color: white; /* Set hero heading color to white */
+    font-size: 2.5em; /* Set font size for hero heading */
+    margin-bottom: 20px; /* Add margin below hero heading */
+}
+
+.featured-packages {
+    padding: 50px 0; /* Add padding to featured packages section */
+    text-align: center; /* Center-align content */
+}
+
+.packages-container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center-align items */
+    gap: 20px; /* Add gap between items */
+}
+
+.package-card {
+    background-color: white; /* Set card background color */
+    border-radius: 12px; /* Add rounded corners */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07); /* Add shadow for depth */
+    overflow: hidden; /* Hide overflowing content */
+    transition: all 0.4s ease; /* Smooth transition for hover effect */
+    border: 1px solid rgba(0, 0, 0, 0.05); /* Add subtle border */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack content vertically */
+    border: solid blue 5px; /* Add blue border for emphasis */
+}
+
+.package-card:hover {
+    transform: translateY(-10px); /* Move card up on hover */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12); /* Increase shadow on hover */
+}
+
+.package-card img {
+    width: 100%; /* Full width images */
+    height: 250px; /* Set fixed height for images */
+    object-fit: cover; /* Ensure images cover the container */
+    transition: transform 0.4s ease; /* Smooth transition for hover effect */
+}
+
+.package-card:hover img {
+    transform: scale(1.05); /* Scale image on hover */
+}
+
+.package-card h3 {
+    color: var(--primary-color); /* Set heading color */
+    font-size: 1.5rem; /* Set font size */
+    margin: 15px; /* Add margin */
+    margin-bottom: 10px; /* Add margin below heading */
+}
+
+.package-card p {
+    color: var(--text-color); /* Set text color */
+    margin: 0 15px 10px; /* Add margin */
+    font-size: 1rem; /* Set font size */
+}
+
+.packages-container {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Responsive grid layout */
+    gap: 30px; /* Add gap between grid items */
+    padding: 40px 5%; /* Add padding to the container */
+}
+
+/* Tour Packages Page */
+.tour-packages {
+    padding: 50px 20px; /* Add padding to the section */
+}
+
+.tour-packages h1 {
+    text-align: center; /* Center-align heading */
+    margin-bottom: 30px; /* Add margin below heading */
+}
+
+/* Booking Page */
+.booking-page {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center-align content */
+    padding: 50px 20px; /* Add padding to the section */
+}
+
+.booking-container {
+    display: flex; /* Use flexbox for layout */
+    width: 90%; /* Set width */
+    max-width: 1200px; /* Set maximum width */
+    background-color: white; /* Set background color */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Add shadow for depth */
+    border-radius: 10px; /* Add rounded corners */
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.package-preview {
+    flex: 1; /* Allow section to grow */
+    background-color: var(--light-color); /* Set background color */
+    padding: 30px; /* Add padding */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack content vertically */
+}
+
+.package-preview img {
+    width: 100%; /* Full width images */
+    height: 350px; /* Set fixed height for images */
+    object-fit: cover; /* Ensure images cover the container */
+    border-radius: 10px; /* Add rounded corners */
+    margin-bottom: 20px; /* Add margin below images */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.package-preview img:hover {
+    transform: scale(1.05); /* Scale image on hover */
+}
+
+.package-preview h2 {
+    color: var(--primary-color); /* Set heading color */
+    margin-bottom: 15px; /* Add margin below heading */
+    font-size: 2rem; /* Set font size */
+}
+
+.package-preview p {
+    color: var(--text-color); /* Set text color */
+    margin-bottom: 10px; /* Add margin below paragraphs */
+    line-height: 1.6; /* Set line height */
+}
+
+.package-preview p:nth-of-type(3) {
+    font-weight: bold; /* Set font weight to bold */
+    color: var(--secondary-color); /* Set text color */
+    font-size: 1.2rem; /* Set font size */
+}
+
+.booking-form {
+    flex: 1; /* Allow section to grow */
+    padding: 40px; /* Add padding */
+    background-color: white; /* Set background color */
+}
+
+.booking-form h2 {
+    color: var(--dark-color); /* Set heading color */
+    margin-bottom: 25px; /* Add margin below heading */
+    text-align: center; /* Center-align heading */
+    position: relative; /* Set position to relative */
+}
+
+.booking-form h2::after {
+    content: ''; /* Add pseudo-element */
+    position: absolute; /* Set position to absolute */
+    bottom: -10px; /* Position below heading */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    width: 100px; /* Set width */
+    height: 3px; /* Set height */
+    background-color: var(--primary-color); /* Set background color */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Add margin below form groups */
+}
+
+.form-group label {
+    display: block; /* Make labels block elements */
+    margin-bottom: 5px; /* Add margin below labels */
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%; /* Full width inputs */
+    padding: 10px; /* Add padding */
+    border: 1px solid #ddd; /* Add border */
+    border-radius: 5px; /* Add rounded corners */
+}
+
+/* Styles for the search form */
+.search-form {
+    text-align: center; /* Center-align search form */
+    margin-bottom: 20px; /* Add margin below search form */
+}
+
+.search-form input[type="text"] {
+    padding: 10px; /* Add padding */
+    width: 300px; /* Set width */
+    border: 1px solid #ddd; /* Add border */
+    border-radius: 5px; /* Add rounded corners */
+    font-size: 16px; /* Set font size */
+    margin-right: 10px; /* Add margin to the right */
+    outline: none; /* Remove default outline */
+    transition: box-shadow 0.3s ease; /* Smooth transition for focus effect */
+}
+
+.search-form input[type="text"]:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add shadow on focus */
+}
+
+.search-form button {
+    padding: 10px 20px; /* Add padding */
+    background-color: #1a5f7a; /* Set button background color */
+    color: white; /* Set button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Set font size */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.search-form button:hover {
+    background-color: #ff6b6b; /* Change button background color on hover */
+}
+
+/* Message when no results are found */
+.no-results-message {
+    text-align: center; /* Center-align message */
+    color: #ff6b6b; /* Set text color */
+    font-size: 18px; /* Set font size */
+    margin-top: 20px; /* Add margin above message */
+}
+
+/* Contact Page */
+.contact-page {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center-align content */
+    padding: 50px 20px; /* Add padding to the section */
+}
+
+/* WhatsApp contact styles */
+.whatsapp-contact {
+    margin-top: 20px; /* Add margin above section */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center-align content */
+    align-items: center; /* Center-align items vertically */
+}
+
+.whatsapp-contact a {
+    display: inline-flex; /* Use flexbox for layout */
+    align-items: center; /* Center-align items vertically */
+    background-color: #277be7; /* Set background color */
+    color: white; /* Set text color */
+    padding: 10px 15px; /* Add padding */
+    border-radius: 50px; /* Add rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Set font size */
+    font-weight: bold; /* Set font weight to bold */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.whatsapp-contact img {
+    margin-right: 10px; /* Add margin to the right */
+    width: 50px; /* Set width */
+    height: 50px; /* Set height */
+}
+
+.whatsapp-contact :hover {
+    background-color: var(--primary-color); /* Change background color on hover */
+    transform: translateY(-3px); /* Move element up on hover */
+    background-color: #1a5f7a; /* Change background color on hover */
+}
+
+/* Contact Form */
+.contact-form {
+    margin: 40px auto; /* Add margin and center-align form */
+    background-color: white; /* Set background color */
+    border-radius: 15px; /* Add rounded corners */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    padding: 40px; /* Add padding */
+}
+
+.contact-form button:hover {
+    background-color: var(--primary-color); /* Change button background color on hover */
+    transform: translateY(-3px); /* Move button up on hover */
+    background-color: #1a5f7a; /* Change button background color on hover */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .main-navigation ul {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: center; /* Center-align items */
+    }
+
+    .main-navigation ul li {
+        margin: 10px 0; /* Add margin between navigation items */
+    }
+
+    .booking-container {
+        flex-direction: column; /* Stack booking sections vertically */
+    }
+
+    .packages-container {
+        flex-direction: column; /* Stack package cards vertically */
+        align-items: center; /* Center-align items */
+    }
+}
+
+/* Contact Feedback Styles */
+.feedback {
+    padding: 10px; /* Add padding */
+    margin-bottom: 20px; /* Add margin below feedback messages */
+    border-radius: 5px; /* Add rounded corners */
+}
+
+.feedback.success {
+    background-color: #d4edda; /* Set success message background color */
+    color: #155724; /* Set success message text color */
+}
+
+.feedback.error {
+    background-color: #f8d7da; /* Set error message background color */
+    color: #721c24; /* Set error message text color */
+}
+
+/* Booking Success message style */
+.success-message {
+    color: #155724; /* Set success message text color */
+    background-color: #d4edda; /* Set success message background color */
+    border: 1px solid #c3e6cb; /* Add border */
+    padding: 10px; /* Add padding */
+    border-radius: 5px; /* Add rounded corners */
+    font-size: 16px; /* Set font size */
+    margin-bottom: 15px; /* Add margin below message */
+}
+
+/* Booking Error message style */
+.error-message {
+    color: #721c24; /* Set error message text color */
+    background-color: #f8d7da; /* Set error message background color */
+    border: 1px solid #f5c6cb; /* Add border */
+    padding: 10px; /* Add padding */
+    border-radius: 5px; /* Add rounded corners */
+    font-size: 16px; /* Set font size */
+    margin-bottom: 15px; /* Add margin below message */
+}
+
+/* About and Privacy Policy Pages */
+.center-text {
+    text-align: center; /* Center-align text */
+    margin-top: 20px; /* Add margin above text */
+}
+
+.page-content {
+    max-width: 800px; /* Set maximum width */
+    margin: 0 auto; /* Center-align content */
+    padding: 30px 20px; /* Add padding */
+    background-color: white; /* Set background color */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Add shadow for depth */
+}
+
+
+
